@@ -15,6 +15,6 @@ all_movies_titles = [movie.getText() for movie in soup.find_all(name="h3", class
 all_movies_titles.reverse()
 # print(all_movies_titles)
 
-with open("movies.txt", mode="w") as file:
+with open("movies.txt", mode="w", encoding="utf-8") as file:
     for title in all_movies_titles:
         file.write(f"{title}\n")
