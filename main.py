@@ -23,6 +23,7 @@ soup = BeautifulSoup(web_text, "html.parser")
 
 all_movies_titles = [movie.getText() for movie in soup.find_all(name="h3", class_="title")]
 all_movies_titles.reverse()
+# or movies = all_movies_title[::-1]
 # print(all_movies_titles)
 
 with open("movies.txt", mode="w", encoding="utf-8") as file:
